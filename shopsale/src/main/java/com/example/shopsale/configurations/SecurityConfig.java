@@ -35,9 +35,9 @@ public class SecurityConfig{
                                 .anyRequest().authenticated()
                 )
                 .formLogin(login ->
-                        login.loginPage("/login")          // GET: показує форму
-                                .loginProcessingUrl("/login") // POST: обробляє дані (так само як action в формі)
-                                .defaultSuccessUrl("/", true) // після успішного входу
+                        login.loginPage("/login")
+                                .loginProcessingUrl("/login")
+                                .defaultSuccessUrl("/", true)
                                 .failureUrl("/login?error=true")
                                 .permitAll()
                 )
